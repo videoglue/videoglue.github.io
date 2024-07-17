@@ -4,8 +4,8 @@ This is the repository that contains source code for the [VideoGlue website](htt
 
 If you find VideoGlue useful for your work please cite:
 ```
-@article{anonymous2024videoglue
-  author    = {Anonymous Authors},
+@article{hatch2024videoglue
+  author    = {Hatch, Kyle B. and Balakrishna, Ashwin and Mees, Oier and Nair, Surajf, and Park, Seohong, and Wulfe, Blake and Itkina, Masha and Eysenbach, Benjamin and Levine, Sergey and Kollar, Thomas, and Burchfiel, Benjamin},
   title     = {Video Glue: Strengthening the Interface between Video Prediction and Low-Level Control for Hierarchical Imitation Learning},
   journal   = {Under Review},
   year      = {2024},
