@@ -1,0 +1,8 @@
+.DS_store
+.idea
+*._Icon
+__pycache__/
+**/__pycache__/
+
+annotate_movies.py
+

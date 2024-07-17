@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="Video Glue: Strengthening the Interface between Video Prediction and Low-Level Control for Hierarchical Imitation Learning.">
+  <meta name="keywords" content="VideoGlue">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VideoGlue</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag('js', new Date());
+
+    gtag('config', 'G-PYVRSFMDRL');
+  </script>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.svg">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <!-- <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a> -->
+
+      <!-- <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://hypernerf.github.io">
+            HyperNeRF
+          </a>
+          <a class="navbar-item" href="https://nerfies.github.io">
+            Nerfies
+          </a>
+          <a class="navbar-item" href="https://latentfusion.github.io">
+            LatentFusion
+          </a>
+          <a class="navbar-item" href="https://photoshape.github.io">
+            PhotoShape
+          </a>
+        </div>
+      </div> -->
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">Video Glue: Strengthening the Interface between Video Prediction and Low-Level Control for Hierarchical Imitation Learning</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              Anonymous Authors</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./static/pdfs/CoRL_2024__Video_Glue.pdf" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2011.12948"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="https://www.youtube.com/watch?v=gnOzJSgG_tI" target="_blank" rel="noopener noreferrer"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/google/nerfies"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code</span>
+                  </a>
+              </span>
+              <!-- Dataset Link. -->
+              <!-- <span class="link-block">
+                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="far fa-images"></i>
+                  </span>
+                  <span>Data</span>
+                  </a> -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
+        <source src="./static/videos/teaser.mp4"
+                type="video/mp4">
+      </video> -->
+      <img src="./static/images/overviewfig.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+            <!-- <p>Start Frame</p> -->
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">VideoGlue</span> improves hierarchical policy methods for robot learning that use video prediction models.
+      </h2>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-light is-small">
+  <div class="hero-body">
+    <div class="container">
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-14-12_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-26-30_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-55-14_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item item-steve">
+          <video poster="" id="steve" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-14-12_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item item-chair-tp">
+          <video poster="" id="chair-tp" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-26-30_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+        <div class="item item-mask">
+          <video poster="" id="mask" autoplay controls muted loop playsinline width="100%">
+            <source src="./static/videos/2024-06-11_17-55-14_annotated.webm"
+                    type="video/webm">
+          </video>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            While internet-scale training of video predictive models has the potential to provide robot 
+            learning systems with one type of generalization (to the millions of scenarios seen in the 
+            training data), there are other facets of generalization that are not addressed directly by 
+            internet-scale models. For example, they may generate photorealistic yet infeasible frames 
+            and they assume that the low-level controller can generalize from in-domain images to the 
+            generated images. This paper takes aim at these latter two facets of generalization, providing
+            an interface to effectively "glue together'' language-conditioned video prediction models with 
+            low level goal-conditioned policies. We present Video Glue, a simple way to achieve this by 
+            (1) filtering out subgoals that do not lead to task progress and (2) improving the robustness
+            of goal-conditioned policies to subgoals with hallucinated artifacts. Experiments show that 
+            Video Glue achieves a new state-of-the-art on the CALVIN simulation benchmark and significantly 
+            outperforms other generalist robot policies both in simulation experiments and across 5 
+            language-conditioned manipulation tasks in physical experiments.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+
+    <!-- Paper video. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div class="publication-video">
+          <iframe src="https://www.youtube.com/embed/gnOzJSgG_tI?rel=0&amp;showinfo=0"
+                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          <!-- <video id="dollyzoom" controls playsinline height="100%">
+            <source src="./static/videos/CoRL 1-3 Minute Video Presentation.mp4"
+                    type="video/mp4"> -->
+          </video>
+        </div>
+      </div>
+    </div>
+    <!--/ Paper video. -->
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container is-max-desktop">
+
+
+
+    <!-- Animation. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <!-- <h2 class="title is-3">Animation</h2> -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Hierarchical Control</h3>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">VideoGlue</span> can be applied to existing hierarchical policy methods that use video prediction models.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/hierarchical.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <!--/ Re-rendering. -->
+
+
+        
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Improving subgoal quality</h3>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">VideoGlue</span> reduces dithering behavior in hierarchical policy methods and makes policies robust to hallucinated artifacts.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/qualitative.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Zero-shot generalization</h3>
+        <div class="content has-text-justified">
+          <p>
+            Applying <span class="dnerf">VideoGLue</span> to existing hierarchical policy methods achieves state-of-the-art zero-shot generalization performance on both real and simulated robotics benchmarks.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/domains.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <!--/ Re-rendering. -->
+
+        <!-- Re-rendering. -->
+        <h3 class="title is-4">Quantitative Results</h3>
+        <div class="content has-text-justified">
+          <p>
+            <span class="dnerf">VideoGlue</span> achieves state-of-the-art performance on the <a href="http://calvin.cs.uni-freiburg.de" target="_blank" rel="noopener noreferrer">CALVIN benchmark</a>
+             as well as on 5 physical environments based on the <a href="https://rail-berkeley.github.io/bridgedata" target="_blank" rel="noopener noreferrer">Bridge V2</a> robot platform.
+          </p>
+        </div>
+        <div class="content has-text-centered">
+          <img src="./static/images/results.png"
+                 class="interpolation-image"
+                 alt="Interpolate start reference image."/>
+        </div>
+        <!--/ Re-rendering. -->
+        
+        
+
+      </div>
+    </div>
+    <!--/ Animation. -->
+
+
+    <!-- Concurrent Work. -->
+    <!-- <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Related Links</h2>
+
+        <div class="content has-text-justified">
+          <p>
+            There's a lot of excellent work that was introduced around the same time as ours.
+          </p>
+          <p>
+            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
+          </p>
+          <p>
+            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
+            both use deformation fields to model non-rigid scenes.
+          </p>
+          <p>
+            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
+          </p>
+          <p>
+            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
+          </p>
+        </div>
+      </div>
+    </div> -->
+    <!--/ Concurrent Work. -->
+
+  </div>
+</section>
+
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{anonymous2024videoglue,
+  author    = {Anonymous Authors},
+  title     = {Video Glue: Strengthening the Interface between Video Prediction and Low-Level Control for Hierarchical Imitation Learning},
+  journal   = {Under Review},
+  year      = {2024},
+}</code></pre>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a class="icon-link"
+         href="./static/pdfs/CoRL_2024__Video_Glue.pdf" target="_blank" rel="noopener noreferrer">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+          <p>
+            This means you are free to borrow the <a
+              href="https://github.com/videoglue/videoglue.github.io">source code</a> of this website,
+            we just ask that you link back to this page in the footer.
+            Please remember to remove the analytics code included in the header of the website which
+            you do not want on your website.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
